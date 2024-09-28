@@ -44,7 +44,8 @@ class Elf extends Character{
         if (this.power > c.power){
             c.setHp(0);
         } else {
-            c.setPower(c.hp - 1);
+            c.setHp(c.hp - this.power);
+            c.setPower(c.power - 1);
         }
     }
 }
@@ -110,6 +111,8 @@ class HeroesGame {
         CharacterFactory factory = new CharacterFactory();
         GameManager gameManager = new GameManager();
 
+        // Character character1 = new Elf();
+        // Character character2 = new Elf();
         Character character1 = factory.createCharacter();
         Character character2 = factory.createCharacter();
 
