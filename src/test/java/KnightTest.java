@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import lotr.Character;
+import lotr.Knight;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class KnightTest {
