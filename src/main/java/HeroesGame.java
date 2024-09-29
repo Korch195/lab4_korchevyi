@@ -5,6 +5,15 @@ abstract class Character {
     public void kick(Character c){
 
     }
+    
+    public int getPower() {
+        return power;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
     public boolean isAlive(){
         return hp > 0;
     }
@@ -17,6 +26,11 @@ abstract class Character {
     }
     public void setPower(int power) {
         this.power = power;
+    }
+
+    @Override
+    public String toString() {
+        return "Character{hp=" + this.hp + ", power=" + this.power + "}";
     }
     
 }
@@ -32,7 +46,11 @@ class Hobbit extends Character{
     private void toCry(){
 
     }
-
+    @Override
+    public String toString() {
+        return "Hobbit{hp=" + this.hp + ", power=" + this.power + "}";
+    }
+    
 }
 class Elf extends Character{
     public Elf(){
@@ -49,6 +67,11 @@ class Elf extends Character{
             c.setPower(c.power - 1);
         }
     }
+    @Override
+    public String toString() {
+        return "Elf{hp=" + this.hp + ", power=" + this.power + "}";
+    }
+    
 }
 class King extends Character{
     public King(){
