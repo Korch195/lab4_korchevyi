@@ -44,6 +44,7 @@ class Elf extends Character{
         if (this.power > c.power){
             c.setHp(0);
         } else {
+            // posibly not correct implementation
             c.setHp(c.hp - this.power);
             c.setPower(c.power - 1);
         }
@@ -51,8 +52,8 @@ class Elf extends Character{
 }
 class King extends Character{
     public King(){
-        this.power = new Random().nextInt(11) + 5; // 5 to 15
-        this.hp = new Random().nextInt(11) + 5; // 5 to 15
+        this.power = new Random().nextInt(11) + 5;
+        this.hp = new Random().nextInt(11) + 5;
     }
     @Override
     public void kick(Character c){
@@ -83,6 +84,7 @@ class CharacterFactory{
 class GameManager {
     public void fight(Character c1, Character c2) {
         if (c1 instanceof Hobbit && c2 instanceof Hobbit){
+        // need to check 
             System.out.println("Tie");
             return;
         }
